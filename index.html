@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Візитні картки</title>
+</head>
+<body>
+
+<script>
+  // Запитати користувача про особисті дані
+  var name = prompt('Введіть ім\'я','');
+  var position = prompt('Введіть посаду','');
+  var phone = prompt('Введіть телефон','');
+
+  // Створити примірник візитної картки
+  var visitcard = '<table width="100%" border="0">'
+                  + '<tr>'
+                  + '<td align="center" valign="center">'
+                  + '<img src="tree.png">'
+                  + '</td>'
+                  + '<td align="center">'
+                  + '<b>' + name + '</b><br>'
+                  + '<i>' + position + '</i><br>'
+                  + '<font color="blue">' + phone + '</font>'
+                  + '</td>'
+                  + '</tr>'
+                  + '</table>';
+
+  // Вивести таблицю 12x3 з візитними картками
+  document.write('<table width="100%" border="0" align="center">');
+  for(var y=0; y<12; y++) {
+    document.write('<tr>');
+    for(var x=0; x<3; x++) {
+      document.write('<td align="center" style="border-style: dashed; border-width: thin;">');
+      document.write(visitcard);
+      document.write('</td>');
+    }
+    document.write('</tr>');
+  }
+  document.write('</table>');
+</script>
+
+</body>
+</html>
